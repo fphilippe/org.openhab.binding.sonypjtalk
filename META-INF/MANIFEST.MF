@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: org.openhab.binding.sonypjtalk
+Bundle-ManifestVersion: 2
+Bundle-Name: SonyPJTalk Binding
+Bundle-SymbolicName: org.openhab.binding.sonypjtalk;singleton:=true
+Bundle-Vendor: openHAB
+Bundle-Version: 2.4.0
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ClassPath: .
+Import-Package: javax.annotation;resolution:=optional,
+ org.eclipse.smarthome.config.core,
+ org.eclipse.smarthome.core.library.types,
+ org.eclipse.smarthome.core.thing,
+ org.eclipse.smarthome.core.thing.binding,
+ org.eclipse.smarthome.core.thing.binding.builder,
+ org.eclipse.smarthome.core.thing.type,
+ org.eclipse.smarthome.core.types,
+ org.openhab.binding.sonypjtalk,
+ org.openhab.binding.sonypjtalk.handler,
+ org.osgi.service.component.annotations;resolution:=optional,
+ org.slf4j
+Service-Component: OSGI-INF/*.xml
+Export-Package: org.openhab.binding.sonypjtalk,
+ org.openhab.binding.sonypjtalk.handler
+Bundle-ActivationPolicy: lazy

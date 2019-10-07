@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="sonypjtalk"
+						  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+						  xmlns:thing="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0"
+						  xsi:schemaLocation="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0 http://eclipse.org/smarthome/schemas/thing-description-1.0.0.xsd">
+
+	<!-- Sample Thing Type -->
+	<thing-type id="projector">
+		<label>Video projector</label>
+		<description>Video projector compatible with Sony PJTalk - SDCP protocols</description>
+
+		<channels>
+			<channel id="power" typeId="power"/>
+			<channel id="powerStatus" typeId="powerStatus"/>
+			<channel id="modelName" typeId="modelName"/>
+			<channel id="lampTimer" typeId="lampTimer"/>
+		</channels>
+		
+		<config-description>
+            <parameter name="ipAddress" type="text" required="true">
+                <label>Network Address</label>
+                <description>The IP or host name of the device</description>
+                <context>network-address</context>
+                <required>true</required>
+            </parameter>
+            <parameter name="community" type="text" required="true">
+                <label>Community</label>
+                <description>The community used to talk to PJTalk devices on the network</description>
+                <context>String</context>
+                <default>SONY</default>
+                <required>true</required>
+            </parameter>
+        </config-description>
+	</thing-type>
+
+	<!-- Sample Channel Type -->
+	<channel-type id="power">
+        <item-type>Switch</item-type>
+        <label>Power</label>
+        <description>Control power of the device</description>
+    </channel-type>
+    <channel-type id="powerStatus">
+        <item-type>String</item-type>
+        <label>Power status</label>
+        <description>This information allow user to know if the VP is cooling, starting...</description>
+        <state readOnly="true" pattern="%s"></state>
+    </channel-type>
+    <channel-type id="modelName">
+        <item-type>String</item-type>
+        <label>Model name</label>
+        <description>Model name of the video projector.</description>
+        <state readOnly="true" pattern="%s"></state>
+    </channel-type>
+    <channel-type id="lampTimer">
+        <item-type>Number</item-type>
+        <label>Lamp timer</label>
+        <description>Lamp timer in hour.</description>
+        <state readOnly="true" pattern="%d h"></state>
+    </channel-type>
+
+</thing:thing-descriptions>
