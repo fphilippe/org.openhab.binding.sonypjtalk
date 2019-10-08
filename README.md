@@ -35,8 +35,8 @@ A video projector has only on read / write channel : power. It's a switch that a
 
 If you want to contribute, you'll need to :
 
-* download the following project : https://github.com/openhab/openhab2-addons/tree/2.4.0 into openhab2-addons-2.4.0 directory
-* download this project in the following directory : openhab2-addons-2.4.0\addons\binding\org.openhab.binding.sonypjtalk
+* download the following project : https://github.com/openhab/openhab2-addons/tree/2.4.0 into openhab2-addons-2.4.0 directory ;
+* download this project in the following directory : openhab2-addons-2.4.0\addons\binding\org.openhab.binding.sonypjtalk.
 
 The compile command is : mvn install
 
